@@ -5,7 +5,7 @@
 
  padding: 4rem;
  padding-top: 2rem;
- margin-top: 20rem;
+ margin-top: 13rem;
  border: 0.5px black solid;
 }
 .user{
@@ -17,13 +17,14 @@
    font-size:medium;
    padding: 0.1rem;
 }
-#login{
+#btn{
   background-color:hwb(203 0% 0%);
   font-size: medium;
   width: 12.5rem;
   border: 1px black solid;
   border-radius: 0.7rem;
-  padding: 0.3rem;;
+  padding: 0.3rem;
+  cursor: pointer;
   
 }
 #name {

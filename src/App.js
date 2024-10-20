@@ -6,13 +6,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Login/>
+      
       <Router>
         <Routes>
-          <Route path="/Signup" component={Signup}/>
-
-
-          <Route/>
+          <Route path="/login" element={<Login/>}/>
+          <Route path="/signup" element={<Signup/>}/>
         </Routes>
       </Router>
       
