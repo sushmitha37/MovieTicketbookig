@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Signup from './Signup'
+import { Link } from 'react-router-dom';
 function Login() {
   return (
     <div id="box1">
@@ -11,7 +12,8 @@ function Login() {
         
         <button class="user" id="login">login</button>
       </form>
-      <p>Don't have account <a href="www.google.com">signup</a></p>
+      <Signup/>
+      <p>Don't have account ? <Link to="/Signup">Signup</Link></p>
 
     </div>
   )
