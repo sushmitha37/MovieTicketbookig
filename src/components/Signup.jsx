@@ -10,8 +10,8 @@ function Signup() {
         <input type="text" className="user" placeholder='lastName'  />
         <input type="number" className="user" placeholder='Mobile no'required/>
         <input type="email" className="user" placeholder='Email'required/>       
-        <input type="password" className="user" placeholder='password' required/>
-        <input type="password" className="user" placeholder='confirm password' required/>
+        <input type="password" className="user" placeholder='Password' required/>
+        <input type="password" className="user" placeholder='Confirm password' required/>
         <button className="user" id="btn">Signup</button>
         <p>Have account ? <Link to="/">Login</Link></p>
 
