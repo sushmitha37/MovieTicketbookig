@@ -10,13 +10,14 @@ const db=mysql.createConnection(
     {
         host:'localhost',
         user:'root',
-        password:'Sushmitha17',
+        password:'susu1737@',
         database:'Booking'
     }
 )
 
 app.post('/signup',(req,res)=>{
-    const sql="INSERT INTO signup (`First_Name`,`Last_Name`,`Mobile_no`, `Email`, `Password` ,`Confirm_Password`) values(?)";
+    const sql="INSERT INTO signup_1(`First_Name`,`Last_Name`,`Mobile_no`, `Email`, `Password` ,`Confirm_Password`) values(?)";
+    console.log("Body",req.body); 
     const values=[
         req.body.First_Name,
         req.body.Last_Name,
@@ -25,15 +26,16 @@ app.post('/signup',(req,res)=>{
         req.body.Password,        
         req.body.Confirm_Password,  
     ]
+    console.log(values);
     db.query(sql,[values],(err,data)=>{
         if(err) return res.json(err);
-        else return res.json(data);
+        return res.json(data);
     })
 
-})
+});
+
 
 app.listen(port,()=>{
     console.log(`Running on port no ${port}`)
-})
-
+});
 
