@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 function Signup() {
+  // const [successMessage, setSuccessMessage] = useState('');
   const [values, setValues] = useState(
   //   CREATE TABLE signup_1 (
   //     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -27,6 +28,26 @@ function Signup() {
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    // try {
+    //   const response = fetch('http://localhost:5000/signup', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify(values),
+    //   });
+  
+    //   console.log(response); // Check if the response is as expected
+  
+    //   if (response.ok) {
+    //     const result = response.json();
+    //     setSuccessMessage(result.message);
+    //   } else {
+    //     setSuccessMessage('Registration failed. Please try again.');
+    //   }
+    // } catch (error) {
+    //   console.error('Error during signup:', error);
+    //   setSuccessMessage('An error occurred. Please try again.');
+    // }
+  
     console.log(values);
     axios.post('http://localhost:5000/signup', values)
       .then(res => console.log('Registered sucessfully'))
@@ -45,10 +66,6 @@ function Signup() {
         <input type="password" className="user" placeholder='Confirm password' name='Confirm_Password' required onChange={handleChange} />
         <button className="user" id="btn">Signup</button>
         <p>Have account ? <Link to="/">Login</Link></p>
-
-
-
-
       </form>
     </div>
   )
