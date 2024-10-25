@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql2');
+const mysql = require('mysql');
 const cors = require('cors');
 const app = express();
 
@@ -11,7 +11,7 @@ const port = 5000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Sushmitha17',
+    password: 'susu1737@',
     database: 'Booking'
 });
 
@@ -24,6 +24,9 @@ db.connect((err) => {
 });
 
 app.post('/signup', (req, res) => {
+    if (req.body.Password !== req.body.Confirm_Password) {
+        return res.json({ error: 'Password and Confirm Password do not match' });
+    }
     const sql = "INSERT INTO signup_1 (`First_Name`, `Last_Name`, `Mobile_no`, `Email`, `Password`, `Confirm_Password`) VALUES (?)";
     
     const values = [

@@ -23,6 +23,7 @@ function Login() {
         console.log("Response from server:", res.data); // Log server response
         if (res.data.success) {
           console.log('Login successful');
+          
           // Redirect to the dashboard or other component here
         } else {
           setErrorMessage(res.data.message); // Display error message from backend
