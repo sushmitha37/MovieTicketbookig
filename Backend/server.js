@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
 
@@ -11,7 +11,7 @@ const port = 5000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'susu1737@',
+    password: 'Sushmitha17',
     database: 'Booking'
 });
 
@@ -43,34 +43,39 @@ app.post('/signup', (req, res) => {
 
 // POST login route
 app.post('/login', (req, res) => {
-    const { email, password } = req.body;
+    const { Email, Password } = req.body;  
+    console.log("Received Email:", Email);
+    console.log("Received Password:", Password);
 
-    // Check if the user exists in the database
     const sql = 'SELECT * FROM signup_1 WHERE Email = ?';
-    
-    db.query(sql, [email], (err, results) => {
+
+    db.query(sql, [Email], (err, results) => {
         if (err) {
-            console.error(err);
+            console.error("Database error:", err);
             return res.status(500).json({ message: 'Internal server error' });
         }
 
-        // Check if user was found
+        console.log("Query results:", results);
+
         if (results.length === 0) {
-            return res.status(401).json({ message: 'User not found' });
+            console.log("User not found with email:", Email);
+            return res.status(401).json({ message: 'User not found', success: false });
         }
 
         const user = results[0];
 
-        // Compare input password with stored password (assuming passwords are stored as plain text)
-        if (password !== user.Password) {
-            return res.status(401).json({ message: 'Invalid credentials' });
+        if (Password !== user.Password) {
+            console.log("Invalid credentials for user:", Email);
+            return res.status(401).json({ message: 'Invalid credentials', success: false });
         }
 
-        // Successful login
-        res.status(200).json({ message: 'Login successful' });
+        console.log("Login successful for user:", Email);
+        return res.status(200).json({ message: 'Login successful', success: true });
     });
 });
+
 
 app.listen(port, () => {
     console.log(`Running on port no ${port}`);
 });
+
