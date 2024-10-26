@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 function Login() {
@@ -9,7 +9,7 @@ function Login() {
   });
   
   const [errorMessage, setErrorMessage] = useState('');
-
+  const navigate = useNavigate(); // Initialize navigate function
 
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -24,17 +24,17 @@ function Login() {
         if (res.data.success) {
           console.log('Login successful');
           
-          // Redirect to the dashboard or other component here
+          // Redirect to the dashboard page
+          navigate('/dashboard'); // Replace '/dashboard' with your target route
         } else {
           setErrorMessage(res.data.message); // Display error message from backend
         }
       })
       .catch(err => {
         console.error(err);
-        setErrorMessage('An error occurred during login');
+        setErrorMessage('Invalid username or password');
       });
-};
-
+  };
 
   return (
     <div id="box1">

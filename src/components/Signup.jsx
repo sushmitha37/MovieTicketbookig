@@ -4,6 +4,16 @@ import { useState } from 'react';
 import axios from 'axios';
 
 
+// CREATE TABLE signup_1 (
+//       id INT AUTO_INCREMENT PRIMARY KEY,
+//       First_Name VARCHAR(255),
+//       Last_Name VARCHAR(255),
+//       Mobile_no VARCHAR(255),
+//       Email VARCHAR(255),
+//       Password VARCHAR(255),
+//       Confirm_Password VARCHAR(255)
+//   );
+
 const Signup = () => {
 
   const [values, setValues] = useState({
