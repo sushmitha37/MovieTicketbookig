@@ -1,4 +1,7 @@
-
+*{
+  margin:0;
+  padding:0;
+}
 #box1{
  margin:auto;
  width:14rem;
@@ -48,4 +51,12 @@ p{
 }
 a{
   text-decoration: none;
+}
+#dash-head{
+  color: rgb(1, 30, 56);
+}
+#container{
+  background-color: white;
+  padding: 1rem;
+  margin-left: 2rem;
 }
