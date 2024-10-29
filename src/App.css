@@ -52,11 +52,43 @@ p{
 a{
   text-decoration: none;
 }
-#dash-head{
-  color: rgb(1, 30, 56);
+
+#items{
+  display: flex;
+  padding-top: 0.7rem;
+  justify-content: center;
+  align-items: center;
 }
-#container{
-  background-color: white;
-  padding: 1rem;
-  margin-left: 2rem;
+#items h1{
+  color:rgb(241, 56, 43)
+}
+#items input{
+  margin-left: 1rem;
+  width: 30rem;
+  font-size: small;
+  height: fit-content;
+  padding: 0.3rem 0.3rem;
+  
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+#items select{
+  margin-left: 20rem;
+  height: fit-content;
+  font-size: larger;
+  border: none;
+  /* background-color: bisque; */
+  cursor: pointer;
+
+}
+#items button{
+  margin-left: 1rem;
+  padding: 0.2rem 1.1rem;
+  height: fit-content;
+  font-size: medium;
+  background-color:rgb(241, 56, 43);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
