@@ -72,7 +72,7 @@ const Signup = () => {
         <input type="password" className="user" placeholder='Password' name='Password' required onChange={handleChange} style={{ borderColor: passwordMismatch ? 'red' : '' }} value={values.Password}  />
         <input type="password" className="user" placeholder='Confirm password' name='Confirm_Password' required onChange={handleChange} style={{ borderColor: passwordMismatch ? 'red' : '' }} value={values.Confirm_Password} />
         <button className="user" id="btn">Signup</button>
-        <p>Have account ? <Link to="/">Login</Link></p>
+        <p>Have account ? <Link to="/login">Login</Link></p>
         {message && <p>{message}</p>} {/* Display error or success message */}
       </form>
     </div>

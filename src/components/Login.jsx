@@ -25,7 +25,7 @@ function Login() {
           console.log('Login successful');
           
           // Redirect to the dashboard page
-          navigate('/dashboard'); // Replace '/dashboard' with your target route
+          navigate('/'); // Replace '/dashboard' with your target route
         } else {
           setErrorMessage(res.data.message); // Display error message from backend
         }

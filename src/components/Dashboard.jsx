@@ -1,6 +1,13 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom';
+
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
   return (
     <header id="navbar">
       <div id="items">
@@ -16,7 +23,16 @@ const Dashboard = () => {
           <option value="Delhi">Delhi</option>
           <option value="Pune">Pune</option>
         </select>
-        <button>Sign in</button>
+        <button onClick={goToLogin}>Sign in</button>
+      </div>
+      <div id="li-items">
+        <ul id="ul-items">
+          <li id='ul-li'><Link>Movies</Link></li>
+          <li id='ul-li'><Link>Sports</Link></li>
+          <li id='ul-li'><Link>Events</Link></li>
+          <li id='ul-li'><Link>Stream</Link></li>
+          <li id='ul-li'><Link>Activities</Link></li>
+        </ul>
       </div>
     </header>
   )
