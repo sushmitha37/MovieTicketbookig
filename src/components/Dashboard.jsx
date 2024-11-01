@@ -23,17 +23,27 @@ const Dashboard = () => {
           <option value="Delhi">Delhi</option>
           <option value="Pune">Pune</option>
         </select>
-        <button onClick={goToLogin}>Sign in</button>
+        <button onClick={goToLogin}>Sign in</button>  
       </div>
       <div id="li-items">
         <ul id="ul-items">
-          <li id='ul-li'><Link>Movies</Link></li>
-          <li id='ul-li'><Link>Sports</Link></li>
-          <li id='ul-li'><Link>Events</Link></li>
-          <li id='ul-li'><Link>Stream</Link></li>
-          <li id='ul-li'><Link>Activities</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Movies</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Sports</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Events</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Stream</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Activities</Link></li>
         </ul>
+        <ul id="ul-items">
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>YourBookings</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Offers</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>GiftCards</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>FunZone</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Activities</Link></li>
+        </ul>
+        
       </div>
+    
+      
     </header>
   )
 }
