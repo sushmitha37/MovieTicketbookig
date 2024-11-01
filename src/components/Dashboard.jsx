@@ -1,5 +1,4 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 
 
@@ -29,18 +28,18 @@ const Dashboard = () => {
       </div>
       <div id="li-items">
         <ul id="ul-items">
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}} to='/movies'>Movies</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Sports</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Events</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Stream</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Activities</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/movies'>Movies</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/sports'>Sports</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/events'>Events</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/stream'>Stream</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/activities'>Activities</Link></li>
         </ul>
         <ul id="ul-items">
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>YourBookings</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Offers</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>GiftCards</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>FunZone</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Activities</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>YourBookings</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>Offers</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>GiftCards</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>FunZone</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>Activities</Link></li>
         </ul>
         
       </div>
