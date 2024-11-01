@@ -108,7 +108,7 @@ a{
   align-items: center;
   justify-content: center;
   margin: 1rem;
- list-style: none;
+  list-style: none;
 }
 #li-items{
   display: flex;

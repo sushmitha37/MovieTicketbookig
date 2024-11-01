@@ -1,4 +1,5 @@
 import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom';
 
 
@@ -9,6 +10,7 @@ const Dashboard = () => {
     navigate('/login');
   };
   return (
+    <>
     <header id="navbar">
       <div id="items">
         <h1 >ONE7</h1>
@@ -27,7 +29,7 @@ const Dashboard = () => {
       </div>
       <div id="li-items">
         <ul id="ul-items">
-          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Movies</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"small"}} to='/movies'>Movies</Link></li>
           <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Sports</Link></li>
           <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Events</Link></li>
           <li id='ul-li'><Link style={{color:'black',fontSize:"small"}}>Stream</Link></li>
@@ -45,6 +47,9 @@ const Dashboard = () => {
     
       
     </header>
+    
+      
+    </>
   )
 }
 
