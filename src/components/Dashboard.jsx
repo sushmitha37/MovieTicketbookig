@@ -35,11 +35,11 @@ const Dashboard = () => {
           <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/activities'>Activities</Link></li>
         </ul>
         <ul id="ul-items">
-          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>YourBookings</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>Offers</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>GiftCards</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>FunZone</Link></li>
-          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>Activities</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='yourbookings'>YourBookings</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/offers'>Offers</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/giftcards'>GiftCards</Link></li>
+          <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}} to='/funZone'>FunZone</Link></li>
+          {/* <li id='ul-li'><Link style={{color:'black',fontSize:"0.9rem"}}>Activities</Link></li> */}
         </ul>
         
       </div>
