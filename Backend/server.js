@@ -1,5 +1,5 @@
 const express = require('express');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const cors = require('cors');
 const app = express();
 
@@ -11,7 +11,7 @@ const port = 5000;
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'susu1737@',
+    password: 'Sushmitha17',
     database: 'Booking'
 });
 
